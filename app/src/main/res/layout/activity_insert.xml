@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Insert">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="Add Adress"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/name"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:paddingRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:id="@+id/txtName"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/address"
+        android:layout_below="@+id/name"
+        android:paddingRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:id="@+id/txtAdress"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/domestic"
+        android:text="Domestic/Foreign"
+        android:layout_below="@id/address"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/domestic"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="aaaaaaa"/>
+        <RadioButton android:id="@+id/radio_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="bbbbbbbb"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/countrySpinner"
+        android:layout_below="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Country"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/country"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zipcode"
+        android:layout_below="@+id/countrySpinner"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zipcode:"
+            android:textSize="25dp"/>
+
+        <EditText
+            android:id="@+id/txtZipcode"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_below="@+id/zipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Insert"/>
+
+
+</RelativeLayout>
